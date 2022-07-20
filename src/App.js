@@ -17,7 +17,7 @@ function App() {
   const SectionXClicked = (e) => { return SectionClicked(e) }
   const [popInitial, popUpdate] = useState(false);
   const SubmitingADDedmovie=()=>{popUpdate(false);UpdateMovieList([allValues,...UpdatedMovieList])}
- console.log(allValues)
+
   return (
     <div class="background" >
       <FilterBar Section1={NoNSectionClicked} Section2={SectionXClicked} Section3={SectionXClicked} Section4={SectionXClicked} Section5={SectionClicked} section1='None' section2='Kids' section3='Romance' section4='Comedi' section5='Action' Research={Reasearched} StarsResearchFilter={StarsReasearchedEvent} />

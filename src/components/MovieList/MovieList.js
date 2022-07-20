@@ -11,7 +11,7 @@ import XMEN from './MoviePics/X-MEN.jpg'
 import rocky from './MoviePics/rocky.jpg'
 import Gladiator from './MoviePics/Gladiator'
 import Thor from  './MoviePics/Thor.Love_and_Thunder.jpg'
- 
+import Dragon from './MoviePics/Dragon.jpg'
 const MovieList = [
     {
         movieTitle: 'Thor: Love and Thunder',
@@ -133,11 +133,12 @@ const MovieList = [
     ,
 
 {
-    movieTitle: 'X-MEN',
-        Img: XMEN,
-            Rate: 5,
-                url: 'https://www.youtube.com/watch?v=VNxwlx6etXI&ab_channel=RottenTomatoesClassicTrailers',
-                    Type: 'Action'
+    movieTitle: 'Dragon',
+        Img: Dragon,
+            Rate: 4,
+                url: 'https://www.youtube.com/watch?v=oKiYuIsPxYk&ab_channel=hollywoodstreams',
+                    Type: 'kids',
+                    Description:'How to Train Your Dragon is a 2010 American computer-animated action fantasy film loosely based on the 2003 book of the same name by Cressida Cowell, produced by DreamWorks Animation and distributed by Paramount Pictures.                    '
 }
 
 
