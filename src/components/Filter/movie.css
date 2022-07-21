@@ -115,13 +115,10 @@
 }
 .background{
     
-    background-image: url('https://img.freepik.com/free-photo/abstract-uv-ultraviolet-light-composition_23-2149243978.jpg?t=st=1658331458~exp=1658332058~hmac=fdf67dde5cf391bf33d339f556eaa7757a3304405a438ad9b418e28ddff6d7ba&w=1060.jpg');
-    min-height: 100vh;min-width:100%;max-width:100%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position:cover;
-    position: absolute; 
-      
+    background-image: url('C:\Users\Aymen obba\Desktop\my-fifth-project\src\components\MovieList\MoviePics\wallpaper.jpg');
+    min-height: 100vh;min-width:100%;
+
+   
 }
   
 /*POPUP CSS*/
