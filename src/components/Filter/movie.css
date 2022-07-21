@@ -68,6 +68,7 @@
 /*container Section for movies*/
 .card-container {
     /*border:solid 4px red*/
+    box-shadow: 0 0 9px 6px rgb(70, 13, 114); 
     border-radius: 10px;
     display: grid;
     grid-template-rows: 80% 10% 10%;
@@ -106,6 +107,7 @@
     height: 8.8cm;
     width: 7.1cm;
     border-radius:8px;
+    opacity:0.9;
 }
 
 .movieTitle {
@@ -117,14 +119,14 @@
     
     background-image: url('C:\Users\Aymen obba\Desktop\my-fifth-project\src\components\MovieList\MoviePics\wallpaper.jpg');
     min-height: 100vh;min-width:100%;
-
-   
+    
+    
 }
   
 /*POPUP CSS*/
 
 .modalContainer{
-     /*border: solid 4px red;*/
+     /*border: solid 1px red;*/
     display: grid; 
     grid-template-rows: 5cm 10cm 5cm;
     justify-content: center;
