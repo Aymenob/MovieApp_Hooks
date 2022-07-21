@@ -16,8 +16,14 @@ function App() {
   const NoNSectionClicked = () => { return SectionClicked('') }
   const SectionXClicked = (e) => { return SectionClicked(e) }
   const [popInitial, popUpdate] = useState(false);
-  const SubmitingADDedmovie=()=>{popUpdate(false);UpdateMovieList([allValues,...UpdatedMovieList])}
-
+  const SubmitingADDedmovie=()=>{popUpdate(false);UpdateMovieList([allValues,...UpdatedMovieList]);window.onscroll=function(){}}
+  function disableScrolling(){
+     popUpdate(true)
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+}
+const ClosingProp=()=>{popUpdate(false);window.onscroll=function(){}}
   return (
     <div class="background" >
       <FilterBar Section1={NoNSectionClicked} Section2={SectionXClicked} Section3={SectionXClicked} Section4={SectionXClicked} Section5={SectionClicked} section1='None' section2='Kids' section3='Romance' section4='Comedi' section5='Action' Research={Reasearched} StarsResearchFilter={StarsReasearchedEvent} />
@@ -25,10 +31,10 @@ function App() {
       <section style={{ poisition: 'absolute', display: 'grid', gridTemplateColumns: '22% 22% 22% 22%', marginLeft: '1cm', marginTop: '-2cm' }}>
         <ADDmovies
            MoviesAdded={UpdatedMovieList.filter(d => { return d.movieTitle.toLowerCase().includes(typed.toLowerCase()) && (d.Rate >= countSTARS) && (d.Type.toLowerCase().includes(Sectionx.toLowerCase())) })} />
-        <button class='popup' onClick={() => popUpdate(true)}>ADDmovie</button>
+        <button  class='popup' onClick={() =>{ disableScrolling()}} >ADDmovie</button>
       </section>
       <div class='FormContainer'>
-        <Modal  Submit={SubmitingADDedmovie} TitleField={AddingMovieInfo} ImgField={AddingMovieInfo} RateField={AddingMovieInfo} URLField={AddingMovieInfo} TypeField={AddingMovieInfo} DescriptionField={AddingMovieInfo} Close={() => popUpdate(false)} pop={popInitial} />
+        <Modal  Submit={SubmitingADDedmovie} TitleField={AddingMovieInfo} ImgField={AddingMovieInfo} RateField={AddingMovieInfo} URLField={AddingMovieInfo} TypeField={AddingMovieInfo} DescriptionField={AddingMovieInfo} Close={ClosingProp} pop={popInitial} />
       </div>
     </div>
   );
