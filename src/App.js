@@ -17,13 +17,9 @@ function App() {
   const SectionXClicked = (e) => { return SectionClicked(e) }
   const [popInitial, popUpdate] = useState(false);
   const SubmitingADDedmovie=()=>{popUpdate(false);UpdateMovieList([allValues,...UpdatedMovieList]);window.onscroll=function(){}}
-  function disableScrolling(){
-     popUpdate(true)
-    var x=window.scrollX;
-    var y=window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
-}
-const ClosingProp=()=>{popUpdate(false);window.onscroll=function(){}}
+  const disableScrolling=()=>{popUpdate(true) ;var x=window.scrollX;var y=window.scrollY;window.onscroll=function(){window.scrollTo(x, y);};}
+  const ClosingProp=()=>{popUpdate(false);window.onscroll=function(){}}
+  
   return (
     <div class="background" >
       <FilterBar Section1={NoNSectionClicked} Section2={SectionXClicked} Section3={SectionXClicked} Section4={SectionXClicked} Section5={SectionClicked} section1='None' section2='Kids' section3='Romance' section4='Comedi' section5='Action' Research={Reasearched} StarsResearchFilter={StarsReasearchedEvent} />
